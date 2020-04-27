@@ -202,6 +202,28 @@
   
 
   
+    <!-- APlayer 音乐播放器 -->
+    <div id="aplayer"></div>
+    <script defer src="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js" ></script>
+<link  rel="stylesheet" href="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.css" />
+<script type="text/javascript">
+  var oldLoad = window.onload;
+  window.onload = function () {
+    new APlayer({
+      container: document.getElementById('aplayer'),
+      fixed: true,
+      autoplay: 'true' === 'true',
+      loop: 'all',
+      order: 'random',
+      theme: '#b7daff',
+      preload: 'none',
+      audio: [{"name":"砍死法老（feat宁大人）","artist":"MC法老","url":"/songs/MC法老 - 砍死法老（feat宁大人）.mp3","cover":"/img/cover.jpg"}]
+    });
+    oldLoad && oldLoad();
+  }
+</script>
+
+  
 
   
 
@@ -238,6 +260,8 @@
   <script  src="/js/clipboard-use.js" ></script>
 
 
+
+  <script defer src="https://cdn.staticfile.org/smoothscroll/1.4.10/SmoothScroll.min.js" ></script>
 
 
 
